@@ -22,7 +22,7 @@ export default function UpdatePost() {
             const docRef = doc(db, "blogs", postId);
             const docSnap = await getDoc(docRef);
 
-            console.log("Document data:", docSnap.data())
+            // console.log("Document data:", docSnap.data())
 
             setContent(docSnap.data().content)
             setSubTitle(docSnap.data().subtitle)
@@ -49,7 +49,7 @@ export default function UpdatePost() {
             content
         });
 
-
+        navigate(-1)
 
     }
 
@@ -60,7 +60,8 @@ export default function UpdatePost() {
 
 
         <div className="create-post">
-            <h2>UpdatePost</h2>
+
+            <h1>Update Post</h1>
 
             <form onSubmit={handleUpdate} >
                 <div className="form-field">
@@ -77,7 +78,7 @@ export default function UpdatePost() {
                     <label>Content</label>
                     <textarea value={content} onChange={(e) => setContent(e.target.value)}></textarea>
                 </div>
-                <button type='submit' className="create-post-btn" onClick={() => navigate(-1)}>Update Post</button>
+                <button type='submit' className="create-post-btn" >Update Post</button>
             </form>
 
 
