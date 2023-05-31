@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from '../firebase'
+import { Link } from 'react-router-dom'
 
 
 export default function PostDetail() {
@@ -25,7 +26,10 @@ export default function PostDetail() {
 
     return (
         <div className="post-detail">
-            <h1>{post.title}</h1>
+            <div>
+                <h1>{post.title}</h1>
+                <Link to={`/update-post/${postId}`} >Update</Link>
+            </div>
             <p>{post.content}</p>
 
         </div>

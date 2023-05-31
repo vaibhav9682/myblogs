@@ -3,5 +3,6 @@ import Navbar from './Navbar'
 import Home from './Home'
 import CreatePost from './CreatePost'
 import PostDetail from './PostDetail'
+import UpdatePost from './UpdatePost'
 
-export {Navbar, PostDetail, CreatePost, Home}
+export { Navbar, PostDetail, CreatePost, Home, UpdatePost }
